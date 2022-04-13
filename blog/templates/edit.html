@@ -1,0 +1,13 @@
+<h1>글 수정하기</h1>
+<form action="{% url 'update' blog.id %}" method="POST">
+  {% csrf_token %} 제목:
+  <input type="text" name="title" value="{{blog.title}}" /> 본문:<textarea
+    name="contents"
+    id=""
+    cols="30"
+    rows="10"
+  >
+{{blog.contents}}</textarea
+  >
+  <input type="submit" value="작성하기" />
+</form>

@@ -1,0 +1,7 @@
+<h1>{{blog.title}}</h1>
+{{blog.created_at}}
+<br />
+<p>{{blog.contents}}</p>
+<a href="{% url 'home' %}">집으로</a>
+<a href="{% url 'edit' blog.id %}">글 수정하기</a>
+<a href="{% url 'delete' blog.id %}">글 삭제하기</a>
